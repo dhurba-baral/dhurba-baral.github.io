@@ -211,10 +211,10 @@ footer p {
 }
 
 .blog-card {
-    background: white;
+    background: transparent;
     border-radius: 12px;
     padding: 2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: none;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
@@ -226,18 +226,18 @@ footer p {
 
 .blog-card h2 {
     font-size: 1.6rem;
-    color: #1a1a1a;
+    color: #dedada;
     margin-bottom: 0.5rem;
 }
 
 .blog-date {
-    color: #888;
+    color: #9fb0c9;
     font-size: 0.9rem;
     margin-bottom: 1rem;
 }
 
 .blog-excerpt {
-    color: #555;
+    color: #cbdcf0;
     line-height: 1.7;
     margin-bottom: 1rem;
 }
@@ -246,7 +246,7 @@ footer p {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #1976d2;
+    color: #7fb3ff;
     font-weight: 500;
 }
 
