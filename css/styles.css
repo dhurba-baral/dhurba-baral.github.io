@@ -150,6 +150,10 @@ body {
 
 /* Footer */
 footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
     background: white;
     text-align: center;
     padding: 2rem;
@@ -159,4 +163,6 @@ footer {
 
 footer p {
     color: #666;
+    margin: 0;
+    font-size: 0.9rem;
 }
