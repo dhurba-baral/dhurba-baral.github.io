@@ -31,10 +31,12 @@ body {
     height: 70px;
 }
 
-.logo {
+.logo, .logo:link, .logo:visited, .logo:hover, .logo:active, .logo:focus {
+    text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
     color: #1976d2;
+    cursor: pointer;
 }
 
 .nav-menu {
