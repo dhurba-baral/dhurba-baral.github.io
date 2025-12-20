@@ -7,15 +7,17 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #e3f2fd 0%, #e8eaf6 100%);
+    color: #e6eef8;
+    background: radial-gradient(1200px 600px at 10% 10%, #071024 0%, transparent 15%),
+                radial-gradient(1000px 500px at 90% 90%, #0b2236 0%, transparent 15%),
+                linear-gradient(180deg, #071024 0%, #0b1220 60%);
     min-height: 100vh;
 }
 
 /* Navigation */
 .navbar {
-    background: white;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background: transparent;
+    box-shadow: none;
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -35,7 +37,7 @@ body {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-    color: #1976d2;
+    color: #7fb3ff;
     cursor: pointer;
 }
 
@@ -47,7 +49,7 @@ body {
 
 .nav-link {
     text-decoration: none;
-    color: #666;
+    color: #b7c7da;
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 0.5rem 1rem;
@@ -55,11 +57,11 @@ body {
 }
 
 .nav-link:hover {
-    color: #1976d2;
+    color: #7fb3ff;
 }
 
 .nav-link.active {
-    color: #1976d2;
+    color: #9fd0ff;
     font-weight: 600;
 }
 
@@ -72,9 +74,10 @@ body {
 
 /* Home Page Styles */
 .hero-section {
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255,255,255,0.02); /* subtle panel on dark bg */
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.03);
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6);
     padding: 3rem;
     display: flex;
     gap: 3rem;
@@ -90,7 +93,7 @@ body {
     height: 300px;
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 40px rgba(2,6,23,0.7);
 }
 
 .profile-info {
@@ -99,13 +102,13 @@ body {
 
 .profile-info h1 {
     font-size: 2.5rem;
-    color: #1a1a1a;
+    color: #ffffff;
     margin-bottom: 0.5rem;
 }
 
 .profile-info h2 {
     font-size: 1.3rem;
-    color: #666;
+    color: #9fb0c9;
     font-weight: 400;
     margin-bottom: 1.5rem;
 }
@@ -113,8 +116,17 @@ body {
 .description {
     font-size: 1.1rem;
     line-height: 1.8;
-    color: #555;
+    color: #cbdcf0;
     margin-bottom: 2rem;
+}
+
+.contact-section {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* center icons horizontally */
+    align-items: center;     /* center icons vertically within the section */
+    gap: 0.75rem;
+    margin-top: 1rem;
 }
 
 .contact-section h3 {
@@ -124,28 +136,53 @@ body {
 }
 
 .social-links {
-    display: flex;
+    /* display: flex;
     gap: 1.5rem;
+    margin-bottom: 1rem; */
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: nowrap;
     margin-bottom: 1rem;
+    /* allow horizontal scroll if viewport is too small */
+    overflow-x: auto;
 }
 
 .social-link, .email-link {
-    display: flex;
+    /* display: flex;
     align-items: center;
     gap: 0.5rem;
     color: #555;
     text-decoration: none;
     transition: color 0.3s ease;
-    font-size: 1rem;
+    font-size: 1rem; */
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 8px;
+    color: #c6d6ea;
+    text-decoration: none;
+    background: transparent;
+    transition: color 0.2s ease, background 0.2s ease;
+    font-size: 0; /* hide any accidental text nodes so only icon shows */
+
 }
 
 .social-link:hover, .email-link:hover {
-    color: #1976d2;
+    /* color: #1976d2; */
+    color: #fff;
+    background: rgba(99,146,255,0.95);
 }
 
 .icon {
     width: 24px;
     height: 24px;
+    display: block;
+    fill: currentColor;
 }
 
 /* Footer */
@@ -154,15 +191,15 @@ footer {
     left: 0;
     bottom: 0;
     width: 100%;
-    background: white;
+    background: transparent;
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: none;
 }
 
 footer p {
-    color: #666;
+    color: #9fb0c9;
     margin: 0;
     font-size: 0.9rem;
 }
