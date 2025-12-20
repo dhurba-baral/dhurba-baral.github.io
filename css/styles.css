@@ -16,7 +16,9 @@ body {
 
 /* Navigation */
 .navbar {
-    background: transparent;
+    background: radial-gradient(1200px 600px at 10% 10%, #071024 0%, transparent 15%),
+                radial-gradient(1000px 500px at 90% 90%, #0b2236 0%, transparent 15%),
+                linear-gradient(180deg, #071024 0%, #0b1220 60%);
     box-shadow: none;
     position: sticky;
     top: 0;
@@ -74,7 +76,7 @@ body {
 
 /* Home Page Styles */
 .hero-section {
-    background: rgba(255,255,255,0.02); /* subtle panel on dark bg */
+    background: transparent; /* subtle panel on dark bg */
     border-radius: 12px;
     border: 1px solid rgba(255,255,255,0.03);
     box-shadow: 0 8px 30px rgba(2,6,23,0.6);
@@ -185,13 +187,132 @@ body {
     fill: currentColor;
 }
 
+/* Education and Experience Sections */
+.info-section {
+    margin-top: 0.5rem;
+    background: transparent;
+    border-radius: 15px;
+    box-shadow: none;
+    padding: 1rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    color: #dedada;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 0.5px solid #7fb3ff;
+}
+
+.section-icon {
+    width: 32px;
+    height: 32px;
+    color: #7fb3ff;
+}
+
+.timeline {
+    display: grid;
+    gap: 1rem;
+}
+
+.timeline-item {
+    background: transparent;
+    border-radius: 8px;
+    /* padding: 1rem; */
+    border-left: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.timeline-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 20px rgba(127, 179, 255, 0.15);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+    gap: 1.5rem;
+}
+
+.timeline-left {
+    flex: 1;
+}
+
+.timeline-content h4 {
+    font-size: 1.4rem;
+    color: #dedada;
+    font-weight: 700;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.3;
+}
+
+.timeline-date {
+    background: transparent;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    white-space: nowrap;
+    display: inline-block;
+    box-shadow: none;
+}
+
+.timeline-content h5,
+.timeline-left h5 {
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 500;
+    margin: 0 0 1rem 0;
+}
+
+.timeline-item h5 a,
+.timeline-left h5 a,
+.timeline-left h5 a:link,
+.timeline-left h5 a:visited,
+.timeline-left h5 a:hover,
+.timeline-left h5 a:active,
+.timeline-left h5 a:focus {
+    color: #7fb3ff;
+    text-decoration: none !important;
+    border-bottom: none !important;
+    transition: all 0.3s ease;
+}
+
+.timeline-content h5 a,
+.timeline-content h5 a:link,
+.timeline-content h5 a:visited,
+.timeline-content h5 a:hover,
+.timeline-content h5 a:active,
+.timeline-content h5 a:focus {
+    color: #7fb3ff;
+    text-decoration: none;
+    border-bottom: none;
+    transition: all 0.3s ease;
+}
+
+.timeline-content p {
+    color: #cbdcf0;
+    line-height: 1.8;
+    margin: 0;
+    font-size: 1rem;
+}
+
 /* Footer */
 footer {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background: transparent;
+    background: radial-gradient(1200px 600px at 10% 10%, #071024 0%, transparent 15%),
+                radial-gradient(1000px 500px at 90% 90%, #0b2236 0%, transparent 15%),
+                linear-gradient(180deg, #071024 0%, #0b1220 60%);
     text-align: center;
     padding: 2rem;
     margin-top: 4rem;
