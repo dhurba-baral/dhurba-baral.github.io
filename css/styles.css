@@ -338,6 +338,81 @@ footer p {
     font-size: 0.9rem;
 }
 
+/* Vertical Timeline for Other Experiences */
+.vertical-timeline {
+    position: relative;
+    padding-left: 0;
+}
+
+.vertical-timeline::before {
+    content: '';
+    position: absolute;
+    left: 100px;
+    top: 0;
+    bottom: 0;
+    width: 1.5px;
+    background: linear-gradient(to bottom, #1976d2, #64b5f6);
+}
+
+.vertical-timeline-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    position: relative;
+}
+
+.vertical-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 90px;
+    top: 30px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1976d2;
+    border: 2px solid white;
+    box-shadow: 0 0 0 3px #1976d2;
+    z-index: 1;
+}
+
+.vertical-timeline-date {
+    min-width: 100px;
+    font-weight: 600;
+    color: #1976d2;
+    font-size: 1rem;
+    padding-top: 0.3rem;
+    text-align: right;
+    flex-shrink: 0;
+}
+
+.vertical-timeline-content {
+    flex: 1;
+    background: transparent;
+    padding: 0.5rem;
+    border-radius: 2px;
+    border-left: none;
+    margin-left: 2rem;
+}
+
+.vertical-timeline-content h5 {
+    font-size: 1.2rem;
+    color: #dedada;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.vertical-timeline-content p {
+    color: #cbdcf0;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.vertical-timeline-content-organization {
+    /* make italic */
+    font-style: italic;
+}
+
 /* Blog Page */
 .blog-grid {
     display: grid;
