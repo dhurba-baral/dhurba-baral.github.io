@@ -304,6 +304,19 @@ body {
     font-size: 1rem;
 }
 
+.timeline-content ul {
+    padding-left: 2rem;
+    margin: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.timeline-content li {
+    color: #cbdcf0;
+    line-height: 1.8;
+    margin: 0.25rem 0;
+    font-size: 1rem;
+}
+
 /* Footer */
 footer {
     position: fixed;
