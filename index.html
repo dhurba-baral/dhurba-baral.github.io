@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dhurba Baral</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('theme') === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) {}
+        })();
+    </script>
 </head>
 <body>
     <!-- Navigation -->
@@ -15,6 +24,12 @@
                 <!-- <li><a href="index.html" class="nav-link active">Home</a></li> -->
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
                 <li><a href="blogs.html" class="nav-link">Blog</a></li>
+                <li>
+                    <button class="theme-toggle" type="button" aria-label="Switch to light mode">
+                        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </button>
+                </li>
             </ul>
         </div>
     </nav>
@@ -36,7 +51,7 @@
                     Cincinnati, OH, USA
                 </p>
                 <p class="description">
-                    I am a Computer Science graduate student at the University of Cincinnati pursuing an MS in Computer Science. I am currently doing research under the supervision of <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Jarek Meller, PhD</a>, focusing on <strong>computational biology</strong>, where I apply deep learning to problems in genomics and drug discovery, including genotype–phenotype analysis using Single Nucleotide Polymorphisms (SNPs) and predicting drug–target interactions. I have more than two years of professional experience in machine learning, data engineering, and LLM-based applications. I am deeply curious about how things work which bolsters my passion for solving challenging problems in AI and Biology.
+                    I am a Computer Science graduate student at the University of Cincinnati pursuing an MS in Computer Science. I am currently doing research under the supervision of <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Jarek Meller, PhD</a>, focusing on <strong>Computational Biology</strong>, where I apply deep learning to problems in genomics and drug discovery, including <strong>genotype–phenotype analysis using Single Nucleotide Polymorphisms (SNPs)</strong> and <strong>predicting drug–target interactions</strong>. I have more than two years of professional experience in machine learning, data engineering, and LLM-based applications, including my works in graph-based reasoning and developing scalable ML workflows.
                 </p>
                 <div class="contact-section">
                     <div class="social-links">
@@ -262,5 +277,6 @@
     <footer>
         <p>&copy; 2026 Dhurba Baral. All rights reserved.</p>
     </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>
