@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhurba Baral</title>
+    <title>Dhurba Baral — Computational Biology &amp; Biomedical Informatics</title>
+    <meta name="description" content="Graduate student in Computer Science at the University of Cincinnati, working with Prof. Jarek Meller on machine learning for computational drug discovery — virtual screening, drug–target interaction prediction, protein and chemical language models, and pharmacogenomics.">
+    <meta name="author" content="Dhurba Baral">
+    <link rel="canonical" href="https://dhurba-baral.github.io/">
+
+    <!-- Open Graph / social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Dhurba Baral">
+    <meta property="og:title" content="Dhurba Baral — Computational Biology &amp; Biomedical Informatics">
+    <meta property="og:description" content="Graduate student in Computer Science at the University of Cincinnati, working with Prof. Jarek Meller on machine learning for computational drug discovery — virtual screening, drug–target interaction prediction, protein and chemical language models, and pharmacogenomics.">
+    <meta property="og:url" content="https://dhurba-baral.github.io/">
+    <meta property="og:image" content="https://dhurba-baral.github.io/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Dhurba Baral — machine learning for computational drug discovery and biomedical informatics">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dhurba Baral — Computational Biology &amp; Biomedical Informatics">
+    <meta name="twitter:description" content="Graduate student in Computer Science at the University of Cincinnati, working with Prof. Jarek Meller on machine learning for computational drug discovery — virtual screening, drug–target interaction prediction, protein and chemical language models, and pharmacogenomics.">
+    <meta name="twitter:image" content="https://dhurba-baral.github.io/images/og-image.png">
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="preload" href="fonts/nunito-sans-latin-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
     <script>
         (function () {
@@ -25,8 +47,9 @@
             </a>
             <ul class="nav-menu">
                 <!-- <li><a href="index.html" class="nav-link active">Home</a></li> -->
+                <li><a href="index.html#research" class="nav-link">Research</a></li>
                 <li><a href="projects.html" class="nav-link">Projects</a></li>
-                <li><a href="blogs.html" class="nav-link">Blog</a></li>
+                <li><a href="blogs.html" class="nav-link">Writing</a></li>
                 <li>
                     <button class="theme-toggle" type="button" aria-label="Switch to light mode">
                         <svg class="icon-moon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -46,15 +69,21 @@
             <div class="profile-info">
                 <h1>Dhurba Baral</h1>
                 <!-- <h2>Computer Science | AI | Mathematics </h2> -->
-                <p class="description">
-                    Graduate Student, MS in Computer Science
+                <p class="description affiliation">
+                    MS in Computer Science (Thesis) &middot; University of Cincinnati
                     <br>
-                    University of Cincinnati    
+                    Meller Lab, College of Medicine
                     <br>
                     Cincinnati, OH, USA
                 </p>
                 <p class="description">
-                    I am a Computer Science graduate student at the University of Cincinnati pursuing an MS in Computer Science. I am currently doing research under the supervision of <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Jarek Meller, PhD</a>, focusing on <strong>Computational Biology</strong>, where I apply deep learning to problems in genomics and drug discovery, including <strong>genotype–phenotype analysis using Single Nucleotide Polymorphisms (SNPs)</strong> and <strong>predicting drug–target interactions</strong>. I have more than two years of professional experience in machine learning, data engineering, and LLM-based applications, including my works in graph-based reasoning and developing scalable ML workflows.
+                    I am a graduate student in Computer Science at the University of Cincinnati, where I work with <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Prof. Jarek Meller</a> (Division of Biomedical Informatics, Cincinnati Children's Hospital Medical Center) on machine-learning methods for <strong>computational drug discovery</strong>.
+                </p>
+                <p class="description">
+                    My research involves representation-learning approaches to <strong>virtual screening</strong> and <strong>drug–target interaction prediction</strong>. It includes contrastive learning for protein-family-aware retrieval of targets for drugs, and protein-small molecules interaction prediction using interpretable deep learning methods. I also work in <strong>pharmacogenomics</strong>, modeling genotype–phenotype relationships from SNP data to predict adverse drug response. Before graduate school I spent two years as a machine-learning engineer, building LLM systems and production ML infrastructure.
+                </p>
+                <p class="description availability">
+                    Applying to PhD programs in computational biology and biomedical informatics for Fall 2027.
                 </p>
                 <div class="contact-section">
                     <div class="social-links">
@@ -83,6 +112,68 @@
             </div>
         </div>
 
+        <!-- Research Section -->
+        <div class="info-section" id="research">
+            <h3 class="section-title">
+                Research
+            </h3>
+            <div class="timeline">
+                <!-- Contrastive learning for virtual screening -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-left">
+                            <h3>Virtual Screening Using a Novel Contrastive Learning Framework</h3>
+                            <h5>Advisor: <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Prof. Jarek Meller</a></h5>
+                        </div>
+                        <span class="timeline-date">January 2026 - Present</span>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developing a <strong>contrastive learning</strong> framework for protein-family-aware virtual screening.</li>
+                            <li>Studying how such representations transfer across major protein target families.</li>
+                        </ul>
+                        <p class="research-status"><span class="status-tag">Manuscript in preparation</span></p>
+                    </div>
+                </div>
+
+                <!-- Opioid-induced respiratory depression -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-left">
+                            <h3>Prediction of Opioid–Induced Respiratory Depression in Pediatric Patients</h3>
+                            <h5>Advisor: <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Prof. Jarek Meller</a></h5>
+                        </div>
+                        <span class="timeline-date">January 2026 - Present</span>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Developing machine-learning models to predict <strong>opioid-induced respiratory depression</strong> from genotype and clinical features in a multi-center pediatric cohort.</li>
+                            <li>Designing robust, consensus-based feature-selection methods for identifying variants associated with risk.</li>
+                        </ul>
+                        <p class="research-status"><span class="status-tag">Manuscript in preparation</span></p>
+                    </div>
+                </div>
+
+                <!-- Benchmarking chemical language models -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-left">
+                            <h3>Benchmarking the Generalization of Chemical Language Models</h3>
+                            <h5>Advisor: <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Prof. Jarek Meller</a></h5>
+                        </div>
+                        <span class="timeline-date">January 2026 - Present</span>
+                    </div>
+                    <div class="timeline-content">
+                        <ul>
+                            <li>Evaluated how well <strong>chemical language models</strong> (MolFormer, ChemBERTa) separate active from inactive compounds in embedding space, at both the target and the family level.</li>
+                            <li><i>Conclusion:</i> training ML classifiers on top of the DUD-E benchmark is not appropriate; DUD-E is better used to benchmark the generalization of chemical language models directly.</li>
+                        </ul>
+                        <p class="research-status"><span class="status-tag">Poster, ISMB 2026</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Education Section -->
         <div class="info-section">
             <h3 class="section-title">
@@ -92,26 +183,28 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-left">
-                            <h4>MS in Computer Science</h4>
-                            <h5><a href="https://www.uc.edu" target="_blank">University of Cincinnati</a></h4>
+                            <h4>MS in Computer Science (Thesis)</h4>
+                            <h5><a href="https://www.uc.edu" target="_blank">University of Cincinnati</a></h5>
                         </div>
                         <span class="timeline-date">Aug 2025- Present</span>
                     </div>
-                    <!-- <div class="timeline-content">
-                        <p>Specialized in Machine Learning and Artificial Intelligence. Research focus on deep learning architectures for computer vision applications. Published 5 papers in top-tier conferences.</p>
-                    </div> -->
+                    <div class="timeline-content">
+                        <p class="timeline-content-title"><i>Advisor:</i> <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Prof. Jarek Meller</a></p>
+                        <p class="timeline-content-title"><i>Relevant coursework:</i> Introduction to Bioinformatics, Data Science for Biomedical Research, Deep Learning, Machine Learning, Advanced Algorithms</p>
+                    </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-left">
-                            <h4>Bechelor's in Computer Engineering</h4>
-                            <h5><a href="https://tu.edu.np" target="_blank">Tribhuvan University</a></h5>
+                            <h4>Bachelor's in Computer Engineering</h4>
+                            <h5><a href="https://tu.edu.np" target="_blank">Pashchimanchal Campus, IOE, Tribhuvan University</a></h5>
                         </div>
                         <span class="timeline-date">Nov 2018 - July 2023</span>
                     </div>
-                    <!-- <div class="timeline-content">
-                        <p>Focus on software engineering and data science. Thesis on distributed systems optimization. GPA: 3.9/4.0. Teaching Assistant for Data Structures course.</p>
-                    </div> -->
+                    <div class="timeline-content">
+                        <p class="timeline-content-title"><i>Advisor:</i> <a href="https://scholar.google.com/citations?user=noW__G4AAAAJ&amp;hl=en" target="_blank">Prof. Bal Krishna Nyaupane</a></p>
+                        <p class="timeline-content-title"><i>Relevant coursework:</i> Data Structures and Algorithms, Database Management System, Artificial Intelligence, Data Mining, C, C++</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -122,9 +215,9 @@
                 Research Interests
             </h3>
             <ul class="interests-list">
-                <li>Computational Genomics, genotype–phenotype analysis</li>
-                <li>Computational Molecular Biology</li>
-                <li>Applications of AI in drug discovery</li>
+                <li>Using machine learning for drug-target prediction and virtual screening</li>
+                <li>Representation learning for proteins and its structure, domain and function</li>
+                <li>Statistical and machine-learning methods for genotype–phenotype association</li>
             </ul>
         </div>
 
@@ -137,13 +230,13 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-left">
-                            <h3>Student Research Associate <span style="font-weight: normal; font-style: italic;">(Part Time)</span></h3>
+                            <h3>Student Research Associate</h3>
                             <h5>Meller Lab, College of Medicine, University of Cincinnati</h5>
                         </div>
                         <span class="timeline-date">March 2026 - Present</span>
                     </div>
                     <div class="timeline-content">
-                        <p class="timeline-content-title"><i>Supervisor:</i> <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Jarek Meller, PhD</a></p>
+                        <p class="timeline-content-title"><i>Supervisor:</i> <a href="https://med.uc.edu/landing-pages/profile/Index/Pubs/mellerj" target="_blank">Jarek Meller, PhD</a> — Graduate Program Director, Division of Biomedical Informatics, Cincinnati Children's Hospital Medical Center</p>
                         <ul>
                             <li>Investigating genotype–phenotype relationships using <strong>Single Nucleotide Polymorphisms (SNPs)</strong>.</li>
                             <li>Developing deep learning approaches for <strong>Drug–Target Interaction (DTI)</strong> prediction to accelerate drug discovery.</li>
@@ -154,15 +247,15 @@
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-left">
-                            <h3>Machine Learning Engineer</h3>
+                            <h3>Software Engineer (Machine Learning)</h3>
                             <h5><a href="https://tai.com.np/" target="_blank">TAI, Inc.</a></h5>
                         </div>
                         <span class="timeline-date">July 2023 - Aug 2025</span>
                     </div>
                     <div class="timeline-content">
-                        <strong><p class="timeline-content-title">Responsibilities:</p></strong>
+                        <p class="timeline-content-title"><strong>Responsibilities:</strong></p>
                         <ul>
-                                <li>Fine-tuned <strong>BERT</strong> for document processing and implemented <strong>Neo4j</strong> to model data as a graph for representing and
+                                <li>Used <strong>Large Language Models (LLMs)</strong> for document processing and implemented <strong>Neo4j</strong> to model data as a graph for representing and
                                     querying complex relationships between data entities.</li>
                                 <li>Fine-tuned <strong>Large Language Models</strong> (e.g., Llama and GPT) using <strong>Low-Rank Adaptation (LoRA)</strong> and <strong>quantization</strong>, and
                                     implemented <strong>Retrieval Augmented Generation (RAG)</strong> for building customer-facing chat bots.</li>
@@ -174,20 +267,15 @@
                     </div>
                 </div>
 
-                <!-- AI Fellow 2023 -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-left">
-                            <h3>AI Fellow</h3>
-                            <h5> AI Fellowship 2023, Fusemachines, Nepal</h5>
-                        </div>
-                        <span class="timeline-date">March 2023 - August 2023</span>
-                    </div>
-                    <div class="timeline-content">
-                        <p class="timeline-content-title"><i>Coursework:</i> Regression, Classification, Clustering, and Arttificial Neural Networks, Recurrent Neural Networks, Transformers, and more.</p>
-                    </div>
-                </div>
+            </div>
+        </div>
 
+        <!-- Teaching Section -->
+        <div class="info-section">
+            <h3 class="section-title">
+                Teaching
+            </h3>
+            <div class="timeline">
                 <!-- Python and AI/ML Mentor -->
                 <div class="timeline-item">
                     <div class="timeline-header">
@@ -198,25 +286,8 @@
                         <span class="timeline-date">February 2023</span>
                     </div>
                     <div class="timeline-content">
-                        <p class="timeline-content-title">Participated as Python and AI/ML Mentor in a month-long workshop on Machine Learning and Deep Learning forbachelor students.</p>
-                        <p class="timeline-content-title"><i>Modules taught: </i>Linear Regression, Logistic Regression, Naïve Bayes Classifier, Natural Language Processing (RNN, GRU, LSTM)</p>
-                    </div>
-                </div>
-
-                <!-- Hackathon Winner -->
-                <div class="timeline-item">
-                    <div class="timeline-header">
-                        <div class="timeline-left">
-                            <h3>Hackathon Winner</h3>
-                            <h5>Deltathon, Delta 3.0, Purwanchal Campus, Tribhuvan University</h5>
-                        </div>
-                        <span class="timeline-date">January 2023</span>
-                    </div>
-                    <div class="timeline-content">
-                        <p class="timeline-content-title">Built an AI-based system for detecting bees, monitoring their behavior and health status, and suggesting possible
-                            solutions to the detected problems directly to farmers.</p>
-                        <p class="timeline-content-title">Won the <strong>Best Hardware Project Award</strong> in the hackathon.</p>
-                        <p class="timeline-content-title"><i>Tech Used: <strong>YOLOv5</strong> for object detection module integrated with <strong>Raspberry Pi</strong> and <strong>Pi Camera</strong>, <strong>Convolutional Neural Networks (CNNs)</strong> for image classification</i></p>
+                        <p class="timeline-content-title">Mentor in a month-long workshop on Machine Learning and Deep Learning for undergraduate students.</p>
+                        <p class="timeline-content-title"><i>Modules: </i>Classical Machine Learning methods (Linear Regression, Logistic Regression, Naïve Bayes Classifier), Natural Language Processing algorithms(RNN, GRU, LSTM)</p>
                     </div>
                 </div>
 
@@ -230,22 +301,75 @@
                         <span class="timeline-date">July 2022</span>
                     </div>
                     <div class="timeline-content">
-                        <p class="timeline-content-title">Participated as an ML instructor in a three-day workshop on Machine Learning and NLP.</p>
-                        <p class="timeline-content-title"><i>Modules taught: </i>Regression (Linear, Polynomial, Random Forest Regressor), Natural Language Processing (RNN, GRU, LSTM)</p>
+                        <p class="timeline-content-title">Instructor in a three-day workshop on Machine Learning and Natural Language Processing.</p>
+                        <p class="timeline-content-title"><i>Modules taught: </i> Regression-based machine learning methods (Linear, Polynomial, Random Forest Regressor), Natural Language Processing (sequence modeling using Recurrent Neural Network like LSTM)</p>
                     </div>
                 </div>
+            </div>
+        </div>
 
-                <!-- Jenesys 2016 Participant -->
+        <!-- Awards and Fellowships Section -->
+        <div class="info-section">
+            <h3 class="section-title">
+                Awards &amp; Fellowships
+            </h3>
+            <div class="timeline">
+                <!-- Graduate Incentive Award -->
                 <div class="timeline-item">
                     <div class="timeline-header">
                         <div class="timeline-left">
-                            <h3>Participant: Jenesys 2016 Japan (Theme: Energy)</h3>
-                            <h5>Japan International Cooperation Center (JICE)</h5>
+                            <h3>Graduate Incentive Award</h3>
+                            <h5>College of Engineering and Applied Sciences (CEAS), University of Cincinnati</h5>
+                        </div>
+                        <span class="timeline-date">2025 - 2027</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-title">Award of $43,196 supporting graduate study toward the MS in Computer Science.</p>
+                    </div>
+                </div>
+
+                <!-- AI Fellowship 2023 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-left">
+                            <h3>AI Fellowship</h3>
+                            <h5>Fusemachines, Nepal</h5>
+                        </div>
+                        <span class="timeline-date">March 2023 - August 2023</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-title">Studied and applied machine learning and deep learning, earning a micro-degree.</p>
+                        <p class="timeline-content-title"><i>Coursework:</i> Regression, Classification, Clustering, Artificial Neural Networks, Recurrent Neural Networks, Transformers, and more.</p>
+                    </div>
+                </div>
+
+                <!-- Best Hardware Project Award -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-left">
+                            <h3>Best Hardware Project Award</h3>
+                            <h5>Deltathon, Delta 3.0, Purwanchal Campus, IOE, Tribhuvan University</h5>
+                        </div>
+                        <span class="timeline-date">January 2023</span>
+                    </div>
+                    <div class="timeline-content">
+                        <p class="timeline-content-title">Built an embedded AI system for detecting bees, monitoring their behavior and health status, and suggesting possible
+                            solutions to the detected problems directly to farmers.</p>
+                        <p class="timeline-content-title"><i>Tech used: <strong>YOLOv5</strong> for the object detection module integrated with <strong>Raspberry Pi</strong> and <strong>Pi Camera</strong>, fine-tuned <strong>ResNet-50</strong> for identifying diseases from images</i></p>
+                    </div>
+                </div>
+
+                <!-- JENESYS 2016 -->
+                <div class="timeline-item">
+                    <div class="timeline-header">
+                        <div class="timeline-left">
+                            <h3>Student Exchange Program in Japan (Theme: Energy)</h3>
+                            <h5>JENESYS 2016 SAARC 2nd Batch, Japan International Cooperation Center (JICE)</h5>
                         </div>
                         <span class="timeline-date">February 2016</span>
                     </div>
                     <div class="timeline-content">
-                        <p class="timeline-content-title">Participated in JENESYS 2016 program and studied cutting-edge technologies used in Japan for harnessing energy from various sources.</p>
+                        <p class="timeline-content-title">Studied cutting-edge technologies used in Japan for harnessing sustainable energy sources.</p>
                     </div>
                 </div>
             </div>

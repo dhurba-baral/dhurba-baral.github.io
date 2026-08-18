@@ -1,3 +1,44 @@
+/* Nunito Sans (variable, 300-800) — self-hosted, SIL OFL. See fonts/OFL.txt */
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: italic;
+    font-weight: 300 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('../fonts/nunito-sans-latin-ext-italic.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: italic;
+    font-weight: 300 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('../fonts/nunito-sans-latin-italic.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('../fonts/nunito-sans-latin-ext-normal.woff2') format('woff2');
+    unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+    font-family: 'Nunito Sans';
+    font-style: normal;
+    font-weight: 300 800;
+    font-stretch: 100%;
+    font-display: swap;
+    src: url('../fonts/nunito-sans-latin-normal.woff2') format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
     --bg: radial-gradient(1200px 600px at 10% 10%, #071024 0%, transparent 15%),
           radial-gradient(1000px 500px at 90% 90%, #0b2236 0%, transparent 15%),
@@ -20,15 +61,17 @@
     --timeline-hover-shadow: 0 6px 20px rgba(127, 179, 255, 0.15);
     --project-card-shadow: 0 4px 15px rgba(229, 216, 216, 0.1);
     --social-icon: #c6d6ea;
+    --card-border-strong: rgba(159, 208, 255, 0.28);
     --logo-glow: 0 6px 18px rgba(127, 179, 255, 0.28);
     --logo-glow-hover: 0 10px 26px rgba(127, 179, 255, 0.45);
     --logo-ring: rgba(159, 208, 255, 0.35);
     --link-underline: rgba(127, 179, 255, 0.4);
+    --status-text: #9fd0ff;
 }
 
 /* Typography scale (theme independent) */
 :root {
-    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', 'Roboto',
+    --font-sans: 'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI',
                  'Helvetica Neue', Arial, sans-serif;
 
     --fs-meta: 0.875rem;   /* dates, captions */
@@ -68,10 +111,12 @@
     --timeline-hover-shadow: 0 6px 20px rgba(25, 118, 210, 0.15);
     --project-card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
     --social-icon: #3a4a5f;
+    --card-border-strong: rgba(25, 118, 210, 0.3);
     --logo-glow: 0 6px 18px rgba(25, 118, 210, 0.22);
     --logo-glow-hover: 0 10px 26px rgba(25, 118, 210, 0.35);
     --logo-ring: rgba(25, 118, 210, 0.28);
     --link-underline: rgba(25, 118, 210, 0.4);
+    --status-text: #1565c0;
 }
 
 * {
@@ -275,6 +320,21 @@ p, li {
 [data-theme="light"] .theme-toggle .icon-sun { display: block; }
 [data-theme="light"] .theme-toggle .icon-moon { display: none; }
 
+/* Anchored sections clear the sticky navbar when jumped to */
+[id] {
+    scroll-margin-top: 90px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
 /* Container */
 .container {
     max-width: 1200px;
@@ -291,16 +351,16 @@ p, li {
     padding: 3rem;
     display: flex;
     gap: 3rem;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .profile-image {
-    flex: 0 0 300px;
+    flex: 0 0 210px;
 }
 
 .profile-image img {
-    width: 300px;
-    height: 300px;
+    width: 210px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: var(--img-shadow);
@@ -333,6 +393,24 @@ p, li {
     margin-bottom: 1.35rem;
 }
 
+/* Compact affiliation block under the name */
+.affiliation {
+    font-size: var(--fs-small);
+    line-height: 1.65;
+    color: var(--text-soft);
+    margin-bottom: 1.15rem;
+}
+
+/* PhD application status — set apart from the prose */
+.availability {
+    font-size: var(--fs-body);
+    font-weight: 600;
+    color: var(--text-strong);
+    border-left: 2px solid var(--accent);
+    padding-left: 0.85rem;
+    margin-bottom: 0.5rem;
+}
+
 .description a,
 .description a:link,
 .description a:visited,
@@ -353,7 +431,7 @@ p, li {
 
 .description strong {
     color: var(--text-strong);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .contact-section {
@@ -544,8 +622,10 @@ p, li {
     transition: all 0.3s ease;
 }
 
+/* Entry body sits inboard of its title, so it reads as belonging to it */
 .timeline-content {
     margin-top: 0.5rem;
+    padding-left: 1.1rem;
 }
 
 .timeline-content p {
@@ -556,7 +636,7 @@ p, li {
 }
 
 .timeline-content ul {
-    padding-left: 1.35rem;
+    padding-left: 1.15rem;
     margin: 0.5rem 0 0.6rem;
 }
 
@@ -566,6 +646,19 @@ p, li {
     margin: 0.3rem 0;
     padding-left: 0.2rem;
     font-size: var(--fs-body);
+}
+
+/* Research status pills (manuscript / poster state) */
+.research-status {
+    margin: 0.5rem 0 0;
+}
+
+.status-tag {
+    color: var(--status-text);
+    font-size: var(--fs-meta);
+    font-style: italic;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
 /* Inline links in body copy — readable colour plus a soft underline */
@@ -600,7 +693,7 @@ p, li {
 .project-description strong,
 .blog-excerpt strong {
     color: var(--text-strong);
-    font-weight: 600;
+    font-weight: 700;
 }
 
 /* Footer */
@@ -796,25 +889,46 @@ footer p {
     flex: 1;
 }
 
+/* Date + topic tag, right-aligned in the card header */
+.project-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-shrink: 0;
+}
+
+.project-date {
+    font-size: var(--fs-meta);
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    color: var(--text-soft);
+    white-space: nowrap;
+}
+
 .badge {
-    padding: 0.25rem 0.65rem;
+    padding: 0.15rem 0.6rem;
     border-radius: 20px;
-    font-size: 0.72rem;
-    font-weight: 700;
+    border: 1px solid var(--card-border-strong);
+    background: transparent;
+    color: var(--text-soft);
+    font-size: 0.7rem;
+    font-weight: 600;
     letter-spacing: 0.06em;
-    line-height: 1.4;
+    line-height: 1.5;
     text-transform: uppercase;
     white-space: nowrap;
 }
 
-.badge.research {
-    background: #e3f2fd;
-    color: #1976d2;
+/* Languages and frameworks used, as on the CV */
+.project-tech {
+    font-size: var(--fs-meta);
+    color: var(--text-soft);
+    letter-spacing: 0.01em;
+    margin-top: 0.5rem;
 }
 
-.badge.project {
-    background: #f3e5f5;
-    color: #7b1fa2;
+.other-projects-title {
+    margin-top: 2.5rem;
 }
 
 .authors {
@@ -875,6 +989,7 @@ footer p {
     .hero-section {
         flex-direction: column;
         text-align: center;
+        align-items: center;
         padding: 2rem;
     }
 
@@ -883,8 +998,8 @@ footer p {
     }
 
     .profile-image img {
-        width: 200px;
-        height: 200px;
+        width: 170px;
+        height: 170px;
     }
 
     .profile-info h1 {
@@ -900,6 +1015,12 @@ footer p {
         font-size: var(--fs-body);
         margin-left: auto;
         margin-right: auto;
+    }
+
+    /* The accent rule reads as a stray edge against centered text */
+    .availability {
+        border-left: none;
+        padding-left: 0;
     }
 
     .social-links {
